@@ -30,7 +30,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/reviewmyemails/prediction-market-sdk"
+    "url": "https://github.com/illgottengainsss/prediction-market-sdk"
   },
   "devDependencies": {
     "typescript": "^5.4.0"
