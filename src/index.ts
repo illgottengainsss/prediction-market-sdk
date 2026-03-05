@@ -1,0 +1,22 @@
+export { PredictionMarketClient } from "./client";
+export type {
+  ClientConfig,
+  Market,
+  ListMarketsParams,
+  ListMarketsResponse,
+  Category,
+  ArbitrageMarket,
+  Fees,
+  ArbitrageOpportunity,
+  GetArbitrageParams,
+  CrossPlatformMatch,
+  GetCrossPlatformParams,
+  ArbitrageCalculation,
+  CalculateParams,
+  Strategy,
+  TopStrategy,
+  GetTopStrategiesParams,
+  TriggerEvent,
+  GetTriggersParams,
+  ApiResponse,
+} from "./types";

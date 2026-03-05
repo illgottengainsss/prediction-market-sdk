@@ -1,0 +1,38 @@
+{
+  "name": "prediction-market-sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for the Prediction Market Data API — unified access to Polymarket & Kalshi markets, arbitrage detection, and strategy signals",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "polymarket",
+    "kalshi",
+    "prediction-market",
+    "arbitrage",
+    "trading-bot",
+    "market-data",
+    "cross-platform",
+    "strategy-signals"
+  ],
+  "author": "Daniel Evans",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reviewmyemails/prediction-market-sdk"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
