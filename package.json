@@ -1,5 +1,5 @@
 {
-  "name": "prediction-market-sdk",
+  "name": "predmarket-sdk",
   "version": "1.0.0",
   "description": "TypeScript SDK for the Prediction Market Data API — unified access to Polymarket & Kalshi markets, arbitrage detection, and strategy signals",
   "main": "dist/index.js",
