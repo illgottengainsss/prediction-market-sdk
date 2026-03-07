@@ -14,6 +14,10 @@ import type {
   TopStrategy,
   GetTriggersParams,
   TriggerEvent,
+  IntelligenceParams,
+  EntityResult,
+  ThemeResult,
+  SourceResult,
   ApiResponse,
 } from "./types";
 
@@ -96,5 +100,20 @@ export class PredictionMarketClient {
   /** Get recent trigger events from the strategy forward-testing engine */
   async getRecentTriggers(params?: GetTriggersParams): Promise<ApiResponse<TriggerEvent[]>> {
     return this.request("/api/v1/signals/triggers", params as any);
+  }
+
+  /** Get top people and organizations mentioned alongside a topic in 250K+ news sources */
+  async getEntities(params: IntelligenceParams): Promise<ApiResponse<EntityResult>> {
+    return this.request("/api/v1/intelligence/entities", params as any);
+  }
+
+  /** Get GDELT themes co-occurring with a topic — reveals narrative context */
+  async getThemes(params: IntelligenceParams): Promise<ApiResponse<ThemeResult>> {
+    return this.request("/api/v1/intelligence/themes", params as any);
+  }
+
+  /** Get top media sources covering a topic with per-source sentiment scores */
+  async getSources(params: IntelligenceParams): Promise<ApiResponse<SourceResult>> {
+    return this.request("/api/v1/intelligence/sources", params as any);
   }
 }

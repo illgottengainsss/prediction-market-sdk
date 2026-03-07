@@ -18,5 +18,12 @@ export type {
   GetTopStrategiesParams,
   TriggerEvent,
   GetTriggersParams,
+  Entity,
+  EntityResult,
+  Theme,
+  ThemeResult,
+  Source,
+  SourceResult,
+  IntelligenceParams,
   ApiResponse,
 } from "./types";

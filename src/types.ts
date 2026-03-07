@@ -185,6 +185,54 @@ export interface GetTriggersParams {
   profitable?: boolean;
 }
 
+// --- Intelligence ---
+
+export interface Entity {
+  name: string;
+  count: number;
+  type: "person" | "organization";
+}
+
+export interface EntityResult {
+  query: string;
+  timespan: string;
+  persons: Entity[];
+  organizations: Entity[];
+  totalMentions: number;
+}
+
+export interface Theme {
+  theme: string;
+  count: number;
+}
+
+export interface ThemeResult {
+  query: string;
+  timespan: string;
+  themes: Theme[];
+  totalThemes: number;
+}
+
+export interface Source {
+  domain: string;
+  articleCount: number;
+  avgTone: number;
+}
+
+export interface SourceResult {
+  query: string;
+  timespan: string;
+  sources: Source[];
+  totalSources: number;
+  sourceDiversity: number;
+}
+
+export interface IntelligenceParams {
+  q: string;
+  timespan?: "24h" | "3d" | "7d" | "2w" | "1m";
+  limit?: number;
+}
+
 // --- Client Config ---
 
 export interface ClientConfig {
